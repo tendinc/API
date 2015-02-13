@@ -62,6 +62,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
     "data": [
         {
             "id": 123,
+            "name": "Marty Thomas",
             "firstName": "Marty",
             "lastName": "Thomas",
             "email": "marty@tendinc.com",
@@ -82,6 +83,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
         },
         {
             "id": 456,
+            "name": "Ryan Evans",
             "firstName": "Ryan",
             "lastName": "Evans",
             "email": "ryan@tendinc.com",
@@ -114,6 +116,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
     "data": [
         {
             "id": 123,
+            "name": "Marty Thomas",
             "firstName": "Marty",
             "lastName": "Thomas",
             "email": "marty@tendinc.com",
