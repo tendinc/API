@@ -79,7 +79,27 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
             "facebook": "",
             "twitter": "http://twitter.com/martyjthomas",
             "linkedin": "https://www.linkedin.com/in/martinjthomas",
-            "date": "2014-08-07 04:41:06"
+            "activity": {
+                "visits": 1,
+                "pages": 6
+            },
+            "tags": [
+                {
+                    "id": 1,
+                    "name": "Customer"
+                },
+                {
+                    "id": 2,
+                    "name": "BasicUser"
+                }
+            ],
+            "referrers": [
+                {
+                    "id": 2,
+                    "name": "direct"
+                }
+            ],
+            "campaigns": []
         },
         {
             "id": 456,
@@ -100,7 +120,37 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
             "facebook": "",
             "twitter": "https://twitter.com/ryanevans",
             "linkedin": "https://www.linkedin.com/profile/view?id=11981929",
-            "date": "2014-08-07 05:18:28"
+            "activity": {
+                "visits": 32,
+                "pages": 102
+            },
+            "tags": [
+                {
+                    "id": 1,
+                    "name": "Customer"
+                }
+            ],
+            "referrers": [
+                {
+                    "id": 2,
+                    "name": "direct"
+                }
+            ],
+            "campaigns": [
+                {
+                    "id": 1,
+                    "domain": "",
+                    "name": "remarketing",
+                    "source": "ppc",
+                    "medium": "remarketing",
+                    "term": "",
+                    "content": "",
+                    "start": "",
+                    "end": "",
+                    "image": "",
+                    "notes": ""
+                }
+            ]
         }
 }
 </code></pre>
@@ -133,7 +183,27 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
             "facebook": "",
             "twitter": "http://twitter.com/martyjthomas",
             "linkedin": "https://www.linkedin.com/in/martinjthomas",
-            "date": "2014-08-06 07:41:06"
+            "activity": {
+                "visits": 1,
+                "pages": 6
+            },
+            "tags": [
+                {
+                    "id": 1,
+                    "name": "Customer"
+                },
+                {
+                    "id": 2,
+                    "name": "BasicUser"
+                }
+            ],
+            "referrers": [
+                {
+                    "id": 2,
+                    "name": "direct"
+                }
+            ],
+            "campaigns": []
         }
 }
 </code></pre>
