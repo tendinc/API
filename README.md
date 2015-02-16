@@ -236,14 +236,18 @@ This will return <code>200 Ok</code> if successful.
     "data": [
         {
             "id": 1,
-            "url": "tendinc.com",
+            "domain": "tendinc.com",
+            "page": "/",
+            "query": "?utm_campaign=X",
             "referrer": "google",
             "campaign": "",
             "date": "2014-08-05 04:41:06"
         },
         {
             "id": 2,
-            "url": "tendinc.com/pricing",
+            "domain": "tendinc.com",
+            "page": "/pricing",
+            "query": "",
             "referrer": "",
             "campaign": "",
             "date": "2014-08-05 04:42:06"
@@ -282,14 +286,18 @@ This will return <code>200 Ok</code> if successful.
     "data": [
         {
             "id": 1234,
-            "url": "tendinc.com",
+            "domain": "tendinc.com",
+            "page": "/",
+            "query": "?utm_campaign=X",
             "referrer": "google",
             "campaign": "",
             "date": "2014-08-05 04:41:06"
         },
         {
             "id": "TFf7rFIVGTaSTr8Gd4GRtH6zVFCBEfVoWuFxGBhk",
-            "url": "tendinc.com/pricing",
+            "domain": "tendinc.com",
+            "page": "/pricing",
+            "query": "",
             "referrer": "",
             "campaign": "",
             "date": "2014-08-05 04:42:06"
