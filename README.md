@@ -308,6 +308,31 @@ This will return <code>200 Ok</code> if successful.
 
 If the visit is associated it a contact, the contact's ID will be passed as the <code>id</code> integer.  Otherwise, the visitor's anonymous ID will be provided.
 
+### Get all pages
+
+* <code>GET /pages</code> will return all pages visited and their count.
+
+<pre><code>curl -u user:pass https://tendinc.com/api/v1/pages
+</code></pre>
+
+<pre><code>{
+    "data": [
+        {
+            "page": "/",
+            "visits": 9491
+        },
+        {
+            "page": "/pricing",
+            "visits": 2880
+        },
+        {
+            "page": "/features",
+            "visits": 2190
+        },
+    ]
+}
+</code></pre>
+
 ## <a name="campaigns"></a>Campaigns 
 
 ### Get all campaigns
