@@ -576,7 +576,7 @@ Will need to POST the contact's email, along with a comma-separated list of tags
 }
 </code></pre>
 
-### Detach a Contact to a Tag
+### Detach a Contact from a Tag
 
 * <code>POST /tags/detach</code> will detach the tag from the parameters passed.
 
