@@ -560,3 +560,33 @@ This will return <code>200 Ok</code> if the update was a success along with the 
 </code></pre>
 
 This will return <code>200 Ok</code> if successful.
+
+### Assign a Contact to a Tag
+
+* <code>POST /tags/assign</code> will assign the tag from the parameters passed.
+
+Will need to POST the contact's email, along with a comma-separated list of tags to apply to the contact.
+
+<pre><code>curl -u user:pass -i -X POST -d 'email=user@domain&tags=Customer,BasicUser' https://tendinc.com/api/v1/tags/assign
+</code></pre>
+
+<pre><code>{
+    "message": "tags assigned to user@domain.com"
+    ]
+}
+</code></pre>
+
+### Detach a Contact to a Tag
+
+* <code>POST /tags/detach</code> will detach the tag from the parameters passed.
+
+Will need to POST the contact's email, along with a comma-separated list of tags to detach to the contact.
+
+<pre><code>curl -u user:pass -i -X POST -d 'email=user@domain&tags=Customer,BasicUser' https://tendinc.com/api/v1/tags/assign
+</code></pre>
+
+<pre><code>{
+    "message": "tags detached from user@domain.com"
+    ]
+}
+</code></pre>
