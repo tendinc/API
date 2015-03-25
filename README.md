@@ -47,7 +47,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 * [Visits](#visits)
 * [Campaigns](#campaigns)
 * [Referrers](#referrers)
-* [Tags](#tags)
+* [Segments](#segments)
 
 ## <a name="contacts"></a>Contacts 
 
@@ -83,7 +83,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
                 "visits": 1,
                 "pages": 6
             },
-            "tags": [
+            "segments": [
                 {
                     "id": 1,
                     "name": "Customer"
@@ -124,7 +124,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
                 "visits": 32,
                 "pages": 102
             },
-            "tags": [
+            "segments": [
                 {
                     "id": 1,
                     "name": "Customer"
@@ -187,7 +187,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
                 "visits": 1,
                 "pages": 6
             },
-            "tags": [
+            "segments": [
                 {
                     "id": 1,
                     "name": "Customer"
@@ -256,11 +256,11 @@ This will return <code>200 Ok</code> if successful.
 }
 </code></pre>
 
-### Get contact tags
+### Get contact segments
 
-* <code>GET /contacts/123/tags</code> will return the tags associated with the specified contact.
+* <code>GET /contacts/123/segments</code> will return the segments associated with the specified contact.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/contacts/123/tags</code></pre>
+<pre><code>curl -u user:pass https://tendinc.com/api/v1/contacts/123/segments</code></pre>
 
 <pre><code>{
     "data": [
@@ -494,13 +494,13 @@ This will return <code>200 OK</code> if the contacts are found, along with the J
 
 This will return <code>200 OK</code> if the contacts are found, along with the JSON representation of the associated visits.
 
-## <a name="tags"></a>Tags 
+## <a name="segments"></a>Segments 
 
-### Get all tags
+### Get all segments
 
-* <code>GET /tags</code> will return all of the tags in the account.
+* <code>GET /segments</code> will return all of the segments in the account.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/tags
+<pre><code>curl -u user:pass https://tendinc.com/api/v1/segments
 </code></pre>
 
 <pre><code>{
@@ -517,11 +517,11 @@ This will return <code>200 OK</code> if the contacts are found, along with the J
 }
 </code></pre>
 
-### Get tag
+### Get segment
 
-* <code>GET /tags/1</code> will return the selected referrer.
+* <code>GET /segments/1</code> will return the selected referrer.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/tags/1
+<pre><code>curl -u user:pass https://tendinc.com/api/v1/segments/1
 </code></pre>
 
 <pre><code>{
@@ -534,59 +534,59 @@ This will return <code>200 OK</code> if the contacts are found, along with the J
 }
 </code></pre>
 
-### Add tag
+### Add segment
 
-* <code>POST /tags</code> will add the tag from the parameters passed.
+* <code>POST /segments</code> will add the segment from the parameters passed.
 
-<pre><code>curl -u user:pass -i -X POST -d 'name=API' https://tendinc.com/api/v1/tags
+<pre><code>curl -u user:pass -i -X POST -d 'name=API' https://tendinc.com/api/v1/segments
 </code></pre>
 
-This will return <code>201 Success</code> if the insert was a success along with the current JSON representation of the tag.
+This will return <code>201 Success</code> if the insert was a success along with the current JSON representation of the segment.
 
-### Update tag
+### Update segment
 
-* <code>PUT /tags/123</code> will update the tag from the parameters passed.
+* <code>PUT /segments/123</code> will update the segment from the parameters passed.
 
-<pre><code>curl -u user:pass -i -X PUT -d 'name=API2' https://tendinc.com/api/v1/tags/123
+<pre><code>curl -u user:pass -i -X PUT -d 'name=API2' https://tendinc.com/api/v1/segments/123
 </code></pre>
 
-This will return <code>200 Ok</code> if the update was a success along with the current JSON representation of the tag.
+This will return <code>200 Ok</code> if the update was a success along with the current JSON representation of the segment.
 
-### Delete tag
+### Delete segment
 
-* <code>DELETE /tags/123</code> will delete the tag.
+* <code>DELETE /segments/123</code> will delete the segment.
 
-<pre><code>curl -u user:pass -i -X DELETE https://tendinc.com/api/v1/tags/123
+<pre><code>curl -u user:pass -i -X DELETE https://tendinc.com/api/v1/segments/123
 </code></pre>
 
 This will return <code>200 Ok</code> if successful.
 
-### Assign a Contact to a Tag
+### Assign a Contact to a Segment
 
-* <code>POST /tags/assign</code> will assign the tag from the parameters passed.
+* <code>POST /segments/assign</code> will assign the segment from the parameters passed.
 
-Will need to POST the contact's email, along with a comma-separated list of tags to apply to the contact.
+Will need to POST the contact's email, along with a comma-separated list of segments to apply to the contact.
 
-<pre><code>curl -u user:pass -i -X POST -d 'email=user@domain&tags=Customer,BasicUser' https://tendinc.com/api/v1/tags/assign
+<pre><code>curl -u user:pass -i -X POST -d 'email=user@domain&segments=Customer,BasicUser' https://tendinc.com/api/v1/segments/assign
 </code></pre>
 
 <pre><code>{
-    "message": "tags assigned to user@domain.com"
+    "message": "segments assigned to user@domain.com"
     ]
 }
 </code></pre>
 
-### Detach a Contact from a Tag
+### Detach a Contact from a Segment
 
-* <code>POST /tags/detach</code> will detach the tag from the parameters passed.
+* <code>POST /segments/detach</code> will detach the segment from the parameters passed.
 
-Will need to POST the contact's email, along with a comma-separated list of tags to detach to the contact.
+Will need to POST the contact's email, along with a comma-separated list of segments to detach to the contact.
 
-<pre><code>curl -u user:pass -i -X POST -d 'email=user@domain&tags=Customer,BasicUser' https://tendinc.com/api/v1/tags/assign
+<pre><code>curl -u user:pass -i -X POST -d 'email=user@domain&segments=Customer,BasicUser' https://tendinc.com/api/v1/segments/assign
 </code></pre>
 
 <pre><code>{
-    "message": "tags detached from user@domain.com"
+    "message": "segments detached from user@domain.com"
     ]
 }
 </code></pre>
