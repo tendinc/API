@@ -582,7 +582,7 @@ Will need to POST the contact's email, along with a comma-separated list of segm
 
 Will need to POST the contact's email, along with a comma-separated list of segments to detach to the contact.
 
-<pre><code>curl -u user:pass -i -X POST -d 'email=user@domain&segments=Customer,BasicUser' https://tendinc.com/api/v1/segments/assign
+<pre><code>curl -u user:pass -i -X POST -d 'email=user@domain&segments=Customer,BasicUser' https://tendinc.com/api/v1/segments/detach
 </code></pre>
 
 <pre><code>{
