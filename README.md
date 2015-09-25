@@ -99,7 +99,20 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
                     "name": "direct"
                 }
             ],
-            "campaigns": []
+            "campaigns": [
+            {
+                "id": 4,
+                "domain": "",
+                "name": "facebook-ad-1",
+                "source": "facebook",
+                "medium": "ppc",
+                "term": "learnmore",
+                "content": "stuff",
+                "start": "",
+                "end": "",
+                "image": "",
+                "notes": "some notes about this campaign"
+            }
         },
         {
             "id": 456,
@@ -203,7 +216,20 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
                     "name": "direct"
                 }
             ],
-            "campaigns": []
+            "campaigns": [
+            {
+                "id": 4,
+                "domain": "",
+                "name": "facebook-ad-1",
+                "source": "facebook",
+                "medium": "ppc",
+                "term": "learnmore",
+                "content": "stuff",
+                "start": "",
+                "end": "",
+                "image": "",
+                "notes": "some notes about this campaign"
+            }
         }
 }
 </code></pre>
@@ -240,7 +266,7 @@ This will return <code>200 Ok</code> if successful.
             "page": "/",
             "query": "?utm_campaign=X",
             "referrer": "google",
-            "campaign": "",
+            "campaign": "ppc",
             "date": "2014-08-05 04:41:06"
         },
         {
@@ -290,7 +316,7 @@ This will return <code>200 Ok</code> if successful.
             "page": "/",
             "query": "?utm_campaign=X",
             "referrer": "google",
-            "campaign": "",
+            "campaign": "ppc",
             "date": "2014-08-05 04:41:06"
         },
         {
