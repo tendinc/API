@@ -6,12 +6,12 @@ Organized around [REST](http://en.wikipedia.org/wiki/Representational_state_tran
 Authenticate into the Tend API by providing our username and password.
 
 **Via Browser:**
-<pre><code>https://tendinc.com/api/v1/contacts
+<pre><code>https://tend.io/api/v1/contacts
 </code></pre>
 And enter your Tend username & password when prompted.
 
 **With CURL:**
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/contacts
+<pre><code>curl -u user:pass https://tend.io/api/v1/contacts
 </code></pre>
 
 All API requests must be made over HTTPS. Calls made over plain HTTP will fail.
@@ -55,7 +55,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 
 * <code>GET /contacts</code> will return all of the contacts in the account.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/contacts
+<pre><code>curl -u user:pass https://tend.io/api/v1/contacts
 </code></pre>
 
 <pre><code>{
@@ -65,11 +65,11 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
             "name": "Marty Thomas",
             "firstName": "Marty",
             "lastName": "Thomas",
-            "email": "marty@tendinc.com",
+            "email": "marty@tend.io",
             "company": "Tend",
             "title": "Co-Founder",
             "bio": "Co-Founder at Tend. Founder & Developer at Purlem. Husband to my biggest cheerleader. And father to the new loves of my life.",
-            "website": "https://www.tendinc.com",
+            "website": "https://www.tend.io",
             "address": "2 N. LaSalle St.",
             "city": "Chicago",
             "state": "IL",
@@ -119,11 +119,11 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
             "name": "Ryan Evans",
             "firstName": "Ryan",
             "lastName": "Evans",
-            "email": "ryan@tendinc.com",
+            "email": "ryan@tend.io",
             "company": "Tend",
             "title": "Co-Founder",
-            "bio": "Co-Founder: Tend [New] (http://TendInc.com ) Bitesize PR (http://BitesizePR.com ) // Source Sleuth (http://SourceSleuth.com ) // Lift (http://ThisIsLift.com )",
-            "website": "https://www.tendinc.com",
+            "bio": "Co-Founder: Tend [New] (http://tend.io ) Bitesize PR (http://BitesizePR.com ) // Source Sleuth (http://SourceSleuth.com ) // Lift (http://ThisIsLift.com )",
+            "website": "https://www.tend.io",
             "address": "2 N. LaSalle St.",
             "city": "Chicago",
             "state": "IL",
@@ -172,7 +172,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 
 * <code>GET /contacts/123</code> will return the specified contact.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/contacts/123
+<pre><code>curl -u user:pass https://tend.io/api/v1/contacts/123
 </code></pre>
 
 <pre><code>{
@@ -182,11 +182,11 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
             "name": "Marty Thomas",
             "firstName": "Marty",
             "lastName": "Thomas",
-            "email": "marty@tendinc.com",
+            "email": "marty@tend.io",
             "company": "Tend",
             "title": "Co-Founder"
             "bio": "Co-Founder at Tend. Founder & Developer at Purlem. Husband to my biggest cheerleader. And father to the new loves of my life.",
-            "website": "https://www.tendinc.com",
+            "website": "https://www.tend.io",
             "address": "2 N. LaSalle St.",
             "city": "Chicago",
             "state": "IL",
@@ -238,7 +238,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 
 * <code>PUT /contacts/123</code> will update the project from the parameters passed.
 
-<pre><code>curl -u user:pass -i -X PUT -d 'city=Boulder&state=CO' https://tendinc.com/api/v1/contacts/801
+<pre><code>curl -u user:pass -i -X PUT -d 'city=Boulder&state=CO' https://tend.io/api/v1/contacts/801
 </code></pre>
 
 This will return <code>200 OK</code> if the update was a success along with the current JSON representation of the contact.
@@ -247,7 +247,7 @@ This will return <code>200 OK</code> if the update was a success along with the 
 
 * <code>DELETE /contacts/123</code> will delete the contact.
 
-<pre><code>curl -u user:pass -i -X DELETE https://tendinc.com/api/v1/contacts/123
+<pre><code>curl -u user:pass -i -X DELETE https://tend.io/api/v1/contacts/123
 </code></pre>
 
 This will return <code>200 Ok</code> if successful.
@@ -256,13 +256,13 @@ This will return <code>200 Ok</code> if successful.
 
 * <code>GET /contacts/123/visits</code> will return the visits for the specified contact.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/contacts/123/visits</code></pre>
+<pre><code>curl -u user:pass https://tend.io/api/v1/contacts/123/visits</code></pre>
 
 <pre><code>{
     "data": [
         {
             "id": 1,
-            "domain": "tendinc.com",
+            "domain": "tend.io",
             "page": "/",
             "query": "?utm_campaign=X",
             "referrer": "google",
@@ -271,7 +271,7 @@ This will return <code>200 Ok</code> if successful.
         },
         {
             "id": 2,
-            "domain": "tendinc.com",
+            "domain": "tend.io",
             "page": "/pricing",
             "query": "",
             "referrer": "",
@@ -286,7 +286,7 @@ This will return <code>200 Ok</code> if successful.
 
 * <code>GET /contacts/123/segments</code> will return the segments associated with the specified contact.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/contacts/123/segments</code></pre>
+<pre><code>curl -u user:pass https://tend.io/api/v1/contacts/123/segments</code></pre>
 
 <pre><code>{
     "data": [
@@ -305,14 +305,14 @@ This will return <code>200 Ok</code> if successful.
 
 * <code>GET /visits</code> will return the full visit history.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/visits
+<pre><code>curl -u user:pass https://tend.io/api/v1/visits
 </code></pre>
 
 <pre><code>{
     "data": [
         {
             "id": 1234,
-            "domain": "tendinc.com",
+            "domain": "tend.io",
             "page": "/",
             "query": "?utm_campaign=X",
             "referrer": "google",
@@ -321,7 +321,7 @@ This will return <code>200 Ok</code> if successful.
         },
         {
             "id": "TFf7rFIVGTaSTr8Gd4GRtH6zVFCBEfVoWuFxGBhk",
-            "domain": "tendinc.com",
+            "domain": "tend.io",
             "page": "/pricing",
             "query": "",
             "referrer": "",
@@ -338,7 +338,7 @@ If the visit is associated it a contact, the contact's ID will be passed as the 
 
 * <code>GET /pages</code> will return all pages visited and their count.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/pages
+<pre><code>curl -u user:pass https://tend.io/api/v1/pages
 </code></pre>
 
 <pre><code>{
@@ -365,14 +365,14 @@ If the visit is associated it a contact, the contact's ID will be passed as the 
 
 * <code>GET /campaigns</code> will return all of the campaigns in the account.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/campaigns
+<pre><code>curl -u user:pass https://tend.io/api/v1/campaigns
 </code></pre>
 
 <pre><code>{
     "data": [
         {
             "id": 1,
-            "domain": "tendinc.com",
+            "domain": "tend.io",
             "name": "remarketing",
             "source": "ppc",
             "medium": "blogs",
@@ -385,7 +385,7 @@ If the visit is associated it a contact, the contact's ID will be passed as the 
         },
         {
             "id": 2,
-            "domain": "tendinc.com",
+            "domain": "tend.io",
             "name": "facebook-ad1",
             "source": "facebook",
             "medium": "",
@@ -404,13 +404,13 @@ If the visit is associated it a contact, the contact's ID will be passed as the 
 
 * <code>GET /campaigns/1</code> will return the selected referrer.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/campaigns/1
+<pre><code>curl -u user:pass https://tend.io/api/v1/campaigns/1
 </code></pre>
 
 <pre><code>{
     "data": {
         "id": 1,
-        "domain": "tendinc.com",
+        "domain": "tend.io",
         "name": "remarketing",
         "source": "ppc",
         "medium": "blogs",
@@ -428,7 +428,7 @@ If the visit is associated it a contact, the contact's ID will be passed as the 
 
 * <code>PUT /campaigns/123</code> will update the campaign from the parameters passed.
 
-<pre><code>curl -u user:pass -i -X PUT -d 'name=New Campaign' https://tendinc.com/api/v1/campaign/1
+<pre><code>curl -u user:pass -i -X PUT -d 'name=New Campaign' https://tend.io/api/v1/campaign/1
 </code></pre>
 
 This will return <code>200 Ok</code> if the update was a success along with the current JSON representation of the campaign.
@@ -437,7 +437,7 @@ This will return <code>200 Ok</code> if the update was a success along with the 
 
 * <code>DELETE /campaigns/1</code> will delete the campaign.
 
-<pre><code>curl -u user:pass -i -X DELETE https://tendinc.com/api/v1/campaigns/1
+<pre><code>curl -u user:pass -i -X DELETE https://tend.io/api/v1/campaigns/1
 </code></pre>
 
 This will return <code>200 Ok</code> if successful.
@@ -446,7 +446,7 @@ This will return <code>200 Ok</code> if successful.
 
 * <code>GET /campaigns/1/contacts</code> will return all of the contacts associated with a campaign.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/campaigns/1/contacts
+<pre><code>curl -u user:pass https://tend.io/api/v1/campaigns/1/contacts
 </code></pre>
 
 This will return <code>200 OK</code> if the contacts are found, along with the JSON representation of the associated contacts. 
@@ -455,7 +455,7 @@ This will return <code>200 OK</code> if the contacts are found, along with the J
 
 * <code>GET /campaigns/1/visits</code> will return all of the visits associated with a campaign.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/campaigns/1/visits
+<pre><code>curl -u user:pass https://tend.io/api/v1/campaigns/1/visits
 </code></pre>
 
 This will return <code>200 OK</code> if the contacts are found, along with the JSON representation of the associated visits.
@@ -466,7 +466,7 @@ This will return <code>200 OK</code> if the contacts are found, along with the J
 
 * <code>GET /referrers</code> will return all of the referrers in the account.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/referrers
+<pre><code>curl -u user:pass https://tend.io/api/v1/referrers
 </code></pre>
 
 <pre><code>{
@@ -491,7 +491,7 @@ This will return <code>200 OK</code> if the contacts are found, along with the J
 
 * <code>GET /referrers/1</code> will return the selected referrer.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/referrers/4
+<pre><code>curl -u user:pass https://tend.io/api/v1/referrers/4
 </code></pre>
 
 <pre><code>{
@@ -506,7 +506,7 @@ This will return <code>200 OK</code> if the contacts are found, along with the J
 
 * <code>GET /referrers/1/contacts</code> will return all of the contacts associated with a referrer.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/referrers/1/contacts
+<pre><code>curl -u user:pass https://tend.io/api/v1/referrers/1/contacts
 </code></pre>
 
 This will return <code>200 OK</code> if the contacts are found, along with the JSON representation of the associated contacts. 
@@ -515,7 +515,7 @@ This will return <code>200 OK</code> if the contacts are found, along with the J
 
 * <code>GET /referrers/1/visits</code> will return all of the visits associated with a referrer.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/referrers/1/visits
+<pre><code>curl -u user:pass https://tend.io/api/v1/referrers/1/visits
 </code></pre>
 
 This will return <code>200 OK</code> if the contacts are found, along with the JSON representation of the associated visits.
@@ -526,7 +526,7 @@ This will return <code>200 OK</code> if the contacts are found, along with the J
 
 * <code>GET /segments</code> will return all of the segments in the account.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/segments
+<pre><code>curl -u user:pass https://tend.io/api/v1/segments
 </code></pre>
 
 <pre><code>{
@@ -547,7 +547,7 @@ This will return <code>200 OK</code> if the contacts are found, along with the J
 
 * <code>GET /segments/1</code> will return the selected referrer.
 
-<pre><code>curl -u user:pass https://tendinc.com/api/v1/segments/1
+<pre><code>curl -u user:pass https://tend.io/api/v1/segments/1
 </code></pre>
 
 <pre><code>{
@@ -564,7 +564,7 @@ This will return <code>200 OK</code> if the contacts are found, along with the J
 
 * <code>POST /segments</code> will add the segment from the parameters passed.
 
-<pre><code>curl -u user:pass -i -X POST -d 'name=API' https://tendinc.com/api/v1/segments
+<pre><code>curl -u user:pass -i -X POST -d 'name=API' https://tend.io/api/v1/segments
 </code></pre>
 
 This will return <code>201 Success</code> if the insert was a success along with the current JSON representation of the segment.
@@ -573,7 +573,7 @@ This will return <code>201 Success</code> if the insert was a success along with
 
 * <code>PUT /segments/123</code> will update the segment from the parameters passed.
 
-<pre><code>curl -u user:pass -i -X PUT -d 'name=API2' https://tendinc.com/api/v1/segments/123
+<pre><code>curl -u user:pass -i -X PUT -d 'name=API2' https://tend.io/api/v1/segments/123
 </code></pre>
 
 This will return <code>200 Ok</code> if the update was a success along with the current JSON representation of the segment.
@@ -582,7 +582,7 @@ This will return <code>200 Ok</code> if the update was a success along with the 
 
 * <code>DELETE /segments/123</code> will delete the segment.
 
-<pre><code>curl -u user:pass -i -X DELETE https://tendinc.com/api/v1/segments/123
+<pre><code>curl -u user:pass -i -X DELETE https://tend.io/api/v1/segments/123
 </code></pre>
 
 This will return <code>200 Ok</code> if successful.
@@ -593,7 +593,7 @@ This will return <code>200 Ok</code> if successful.
 
 Will need to POST the contact's email, along with a comma-separated list of segments to apply to the contact.
 
-<pre><code>curl -u user:pass -i -X POST -d 'email=user@domain&segments=Customer,BasicUser' https://tendinc.com/api/v1/segments/assign
+<pre><code>curl -u user:pass -i -X POST -d 'email=user@domain&segments=Customer,BasicUser' https://tend.io/api/v1/segments/assign
 </code></pre>
 
 <pre><code>{
@@ -608,7 +608,7 @@ Will need to POST the contact's email, along with a comma-separated list of segm
 
 Will need to POST the contact's email, along with a comma-separated list of segments to detach to the contact.
 
-<pre><code>curl -u user:pass -i -X POST -d 'email=user@domain&segments=Customer,BasicUser' https://tendinc.com/api/v1/segments/detach
+<pre><code>curl -u user:pass -i -X POST -d 'email=user@domain&segments=Customer,BasicUser' https://tend.io/api/v1/segments/detach
 </code></pre>
 
 <pre><code>{
