@@ -80,8 +80,8 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
             "twitter": "http://twitter.com/martyjthomas",
             "linkedin": "https://www.linkedin.com/in/martinjthomas",
             "activity": {
-                "visits": 1,
-                "pages": 6
+                "sessions": 1,
+                "visits": 6
             },
             "segments": [
                 {
@@ -134,8 +134,8 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
             "twitter": "https://twitter.com/ryanevans",
             "linkedin": "https://www.linkedin.com/profile/view?id=11981929",
             "activity": {
-                "visits": 32,
-                "pages": 102
+                "sessions": 32,
+                "visits": 102
             },
             "segments": [
                 {
@@ -197,8 +197,8 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
             "twitter": "http://twitter.com/martyjthomas",
             "linkedin": "https://www.linkedin.com/in/martinjthomas",
             "activity": {
-                "visits": 1,
-                "pages": 6
+                "sessions": 1,
+                "visits": 6
             },
             "segments": [
                 {
