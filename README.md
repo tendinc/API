@@ -101,17 +101,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
             ],
             "campaigns": [
             {
-                "id": 4,
-                "domain": "",
-                "name": "facebook-ad-1",
-                "source": "facebook",
-                "medium": "ppc",
-                "term": "learnmore",
-                "content": "stuff",
-                "start": "",
-                "end": "",
-                "image": "",
-                "notes": "some notes about this campaign"
+                "name": "facebook-ad-1"
             }
         },
         {
@@ -151,17 +141,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
             ],
             "campaigns": [
                 {
-                    "id": 1,
-                    "domain": "",
-                    "name": "remarketing",
-                    "source": "ppc",
-                    "medium": "remarketing",
-                    "term": "",
-                    "content": "",
-                    "start": "",
-                    "end": "",
-                    "image": "",
-                    "notes": ""
+                    "name": "remarketing"
                 }
             ]
         }
@@ -170,7 +150,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 
 ### Get contact
 
-* <code>GET /contacts/123</code> will return the specified contact.
+* <code>GET /contacts/{id}</code> will return the specified contact.
 
 <pre><code>curl -u user:pass https://tend.io/api/v1/contacts/123
 </code></pre>
@@ -212,23 +192,12 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
             ],
             "referrers": [
                 {
-                    "id": 2,
                     "name": "direct"
                 }
             ],
             "campaigns": [
             {
-                "id": 4,
-                "domain": "",
                 "name": "facebook-ad-1",
-                "source": "facebook",
-                "medium": "ppc",
-                "term": "learnmore",
-                "content": "stuff",
-                "start": "",
-                "end": "",
-                "image": "",
-                "notes": "some notes about this campaign"
             }
         }
 }
@@ -236,7 +205,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 
 ### Update contact
 
-* <code>PUT /contacts/123</code> will update the project from the parameters passed.
+* <code>PUT /contacts/{id}</code> will update the project from the parameters passed.
 
 <pre><code>curl -u user:pass -i -X PUT -d 'city=Boulder&state=CO' https://tend.io/api/v1/contacts/801
 </code></pre>
@@ -245,7 +214,7 @@ This will return <code>200 OK</code> if the update was a success along with the 
 
 ### Delete contact
 
-* <code>DELETE /contacts/123</code> will delete the contact.
+* <code>DELETE /contacts/{id}</code> will delete the contact.
 
 <pre><code>curl -u user:pass -i -X DELETE https://tend.io/api/v1/contacts/123
 </code></pre>
@@ -254,7 +223,7 @@ This will return <code>200 Ok</code> if successful.
 
 ### Get contact visit history
 
-* <code>GET /contacts/123/visits</code> will return the visits for the specified contact.
+* <code>GET /contacts/{id}/visits</code> will return the visits for the specified contact.
 
 <pre><code>curl -u user:pass https://tend.io/api/v1/contacts/123/visits</code></pre>
 
@@ -284,7 +253,7 @@ This will return <code>200 Ok</code> if successful.
 
 ### Get contact segments
 
-* <code>GET /contacts/123/segments</code> will return the segments associated with the specified contact.
+* <code>GET /contacts/{id}/segments</code> will return the segments associated with the specified contact.
 
 <pre><code>curl -u user:pass https://tend.io/api/v1/contacts/123/segments</code></pre>
 
@@ -371,91 +340,29 @@ If the visit is associated it a contact, the contact's ID will be passed as the 
 <pre><code>{
     "data": [
         {
-            "id": 1,
-            "domain": "tend.io",
-            "name": "remarketing",
-            "source": "ppc",
-            "medium": "blogs",
-            "term": "",
-            "content": "",
-            "start": "2015-02-05",
-            "end": "2015-03-05",
-            "image": "",
-            "notes": ""
+            "name": "remarketing"
         },
         {
-            "id": 2,
-            "domain": "tend.io",
-            "name": "facebook-ad1",
-            "source": "facebook",
-            "medium": "",
-            "term": "",
-            "content": "",
-            "start": "",
-            "end": "",
-            "image": "",
-            "notes": ""
+            "name": "facebook-ad1"
         }
     ]
 }
 </code></pre>
 
-### Get campaign
-
-* <code>GET /campaigns/1</code> will return the selected referrer.
-
-<pre><code>curl -u user:pass https://tend.io/api/v1/campaigns/1
-</code></pre>
-
-<pre><code>{
-    "data": {
-        "id": 1,
-        "domain": "tend.io",
-        "name": "remarketing",
-        "source": "ppc",
-        "medium": "blogs",
-        "term": "",
-        "content": "",
-        "start": "2015-02-05",
-        "end": "2015-03-05",
-        "image": "",
-        "notes": ""
-    }
-}
-</code></pre>
-
-### Update campaign
-
-* <code>PUT /campaigns/123</code> will update the campaign from the parameters passed.
-
-<pre><code>curl -u user:pass -i -X PUT -d 'name=New Campaign' https://tend.io/api/v1/campaign/1
-</code></pre>
-
-This will return <code>200 Ok</code> if the update was a success along with the current JSON representation of the campaign.
-
-### Delete campaign
-
-* <code>DELETE /campaigns/1</code> will delete the campaign.
-
-<pre><code>curl -u user:pass -i -X DELETE https://tend.io/api/v1/campaigns/1
-</code></pre>
-
-This will return <code>200 Ok</code> if successful.
-
 ### Get all campaign contacts
 
-* <code>GET /campaigns/1/contacts</code> will return all of the contacts associated with a campaign.
+* <code>GET /campaigns/{name}/contacts</code> will return all of the contacts associated with a campaign.
 
-<pre><code>curl -u user:pass https://tend.io/api/v1/campaigns/1/contacts
+<pre><code>curl -u user:pass https://tend.io/api/v1/campaigns/remarketing/contacts
 </code></pre>
 
 This will return <code>200 OK</code> if the contacts are found, along with the JSON representation of the associated contacts. 
 
 ### Get all campaign visits
 
-* <code>GET /campaigns/1/visits</code> will return all of the visits associated with a campaign.
+* <code>GET /campaigns/{name}/visits</code> will return all of the visits associated with a campaign.
 
-<pre><code>curl -u user:pass https://tend.io/api/v1/campaigns/1/visits
+<pre><code>curl -u user:pass https://tend.io/api/v1/campaigns/remarketing/visits
 </code></pre>
 
 This will return <code>200 OK</code> if the contacts are found, along with the JSON representation of the associated visits.
@@ -472,50 +379,32 @@ This will return <code>200 OK</code> if the contacts are found, along with the J
 <pre><code>{
     "data": [
         {
-            "id": 1,
             "name": "direct"
         },
         {
-            "id": 2,
             "name": "google"
         },
         {
-            "id": 3,
             "name": "feedburner"
         }
     ]
 }
 </code></pre>
 
-### Get referrer
-
-* <code>GET /referrers/1</code> will return the selected referrer.
-
-<pre><code>curl -u user:pass https://tend.io/api/v1/referrers/4
-</code></pre>
-
-<pre><code>{
-    "data": {
-        "id": 4,
-        "name": "feedburner"
-    }
-}
-</code></pre>
-
 ### Get all referrer contacts
 
-* <code>GET /referrers/1/contacts</code> will return all of the contacts associated with a referrer.
+* <code>GET /referrers/{name}/contacts</code> will return all of the contacts associated with a referrer.
 
-<pre><code>curl -u user:pass https://tend.io/api/v1/referrers/1/contacts
+<pre><code>curl -u user:pass https://tend.io/api/v1/referrers/google/contacts
 </code></pre>
 
 This will return <code>200 OK</code> if the contacts are found, along with the JSON representation of the associated contacts. 
 
 ### Get all referrer visits
 
-* <code>GET /referrers/1/visits</code> will return all of the visits associated with a referrer.
+* <code>GET /referrers/{name}/visits</code> will return all of the visits associated with a referrer.
 
-<pre><code>curl -u user:pass https://tend.io/api/v1/referrers/1/visits
+<pre><code>curl -u user:pass https://tend.io/api/v1/referrers/google/visits
 </code></pre>
 
 This will return <code>200 OK</code> if the contacts are found, along with the JSON representation of the associated visits.
@@ -545,7 +434,7 @@ This will return <code>200 OK</code> if the contacts are found, along with the J
 
 ### Get segment
 
-* <code>GET /segments/1</code> will return the selected referrer.
+* <code>GET /segments/{id}</code> will return the selected referrer.
 
 <pre><code>curl -u user:pass https://tend.io/api/v1/segments/1
 </code></pre>
@@ -571,7 +460,7 @@ This will return <code>201 Success</code> if the insert was a success along with
 
 ### Update segment
 
-* <code>PUT /segments/123</code> will update the segment from the parameters passed.
+* <code>PUT /segments/{id}</code> will update the segment from the parameters passed.
 
 <pre><code>curl -u user:pass -i -X PUT -d 'name=API2' https://tend.io/api/v1/segments/123
 </code></pre>
@@ -580,7 +469,7 @@ This will return <code>200 Ok</code> if the update was a success along with the 
 
 ### Delete segment
 
-* <code>DELETE /segments/123</code> will delete the segment.
+* <code>DELETE /segments/{id}</code> will delete the segment.
 
 <pre><code>curl -u user:pass -i -X DELETE https://tend.io/api/v1/segments/123
 </code></pre>
