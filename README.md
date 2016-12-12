@@ -203,6 +203,15 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 }
 </code></pre>
 
+### Add contact
+
+* <code>POST /contacts</code> will add a new contact from the parameters passed.
+
+<pre><code>curl -u user:pass -i -X POST -d 'email=joe@test.com&firstName=Joe&lastName=Test' https://tend.io/api/v1/contacts
+</code></pre>
+
+This will return <code>201 Success</code> if the insert was a success along with the current JSON representation of the contact.
+
 ### Update contact
 
 * <code>PUT /contacts/{id}</code> will update the project from the parameters passed.
