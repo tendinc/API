@@ -148,11 +148,11 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 }
 </code></pre>
 
-### Get contact
+### Search contact
 
-* <code>GET /contacts/{id}</code> will return the specified contact.
+* <code>GET /contacts/search/{email}</code> will return the specified contact.
 
-<pre><code>curl -u user:pass https://tend.io/api/v1/contacts/123
+<pre><code>curl -u user:pass https://tend.io/api/v1/contacts/search/marty@tend.io
 </code></pre>
 
 <pre><code>{
@@ -202,6 +202,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
         }
 }
 </code></pre>
+              
 
 ### Add contact
 
