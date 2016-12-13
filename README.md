@@ -148,6 +148,61 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 }
 </code></pre>
 
+### Get contact
+
+* <code>GET /contacts/{id}</code> will return the specified contact.
+
+<pre><code>curl -u user:pass https://tend.io/api/v1/contacts/123
+</code></pre>
+
+<pre><code>{
+    "data": [
+        {
+            "id": 123,
+            "name": "Marty Thomas",
+            "firstName": "Marty",
+            "lastName": "Thomas",
+            "email": "marty@tend.io",
+            "company": "Tend",
+            "title": "Co-Founder"
+            "bio": "Co-Founder at Tend. Founder & Developer at Purlem. Husband to my biggest cheerleader. And father to the new loves of my life.",
+            "website": "https://www.tend.io",
+            "address": "2 N. LaSalle St.",
+            "city": "Chicago",
+            "state": "IL",
+            "zip": "",
+            "country": "",
+            "photo": "https://d2ojpxxtu63wzl.cloudfront.net/static/0cf998559aa4eae658ff31c0b338f155_344b70e63894af453574c5e548d38496ca282ca605c6225d10e2856518bf570c",
+            "facebook": "",
+            "twitter": "http://twitter.com/martyjthomas",
+            "linkedin": "https://www.linkedin.com/in/martinjthomas",
+            "activity": {
+                "sessions": 1,
+                "visits": 6
+            },
+            "segments": [
+                {
+                    "id": 1,
+                    "name": "Customer"
+                },
+                {
+                    "id": 2,
+                    "name": "BasicUser"
+                }
+            ],
+            "referrers": [
+                {
+                    "name": "direct"
+                }
+            ],
+            "campaigns": [
+            {
+                "name": "facebook-ad-1",
+            }
+        }
+}
+</code></pre>
+
 ### Search contact
 
 * <code>GET /contacts/search/{email}</code> will return the specified contact.
