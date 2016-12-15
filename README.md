@@ -299,14 +299,14 @@ This will return <code>200 Ok</code> if successful.
             "domain": "tend.io",
             "page": "/",
             "referrer": "google",
-            "date": "2014-08-05 04:41:06"
+            "date": "2016-12-15T13:43:59-06:00"
         },
         {
             "id": 2,
             "domain": "tend.io",
             "page": "/pricing",
             "referrer": "",
-            "date": "2014-08-05 04:42:06"
+            "date": "2016-12-15T13:43:59-06:00"
         }
     ]
 }
@@ -344,19 +344,15 @@ This will return <code>200 Ok</code> if successful.
             "id": 1234,
             "domain": "tend.io",
             "page": "/",
-            "query": "?utm_campaign=X",
             "referrer": "google",
-            "campaign": "ppc",
-            "date": "2014-08-05 04:41:06"
+            "date": "2016-12-15T13:43:59-06:00"
         },
         {
             "id": "TFf7rFIVGTaSTr8Gd4GRtH6zVFCBEfVoWuFxGBhk",
             "domain": "tend.io",
             "page": "/pricing",
-            "query": "",
             "referrer": "",
-            "campaign": "",
-            "date": "2014-08-05 04:42:06"
+            "date": "2016-12-15T13:43:59-06:00"
         }
     ]
 }
