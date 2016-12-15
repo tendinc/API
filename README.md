@@ -331,7 +331,26 @@ This will return <code>200 Ok</code> if successful.
 
 ## <a name="visits"></a>Visits 
 
-### Get all vists
+### Get visits
+
+* <code>GET /visits/{id}</code> will return the visit data  
+
+<pre><code>curl -u user:pass https://tend.io/api/v1/visits/123
+</code></pre>
+
+<pre><code>{
+    "data": [
+        {
+            "id": 1234,
+            "domain": "tend.io",
+            "page": "/",
+            "referrer": "google",
+            "date": "2016-12-15T13:43:59-06:00"
+        }
+    ]
+}
+
+### Get all visits
 
 * <code>GET /visits</code> will return the full visit history.
 
