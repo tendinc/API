@@ -298,18 +298,14 @@ This will return <code>200 Ok</code> if successful.
             "id": 1,
             "domain": "tend.io",
             "page": "/",
-            "query": "?utm_campaign=X",
             "referrer": "google",
-            "campaign": "ppc",
             "date": "2014-08-05 04:41:06"
         },
         {
             "id": 2,
             "domain": "tend.io",
             "page": "/pricing",
-            "query": "",
             "referrer": "",
-            "campaign": "",
             "date": "2014-08-05 04:42:06"
         }
     ]
