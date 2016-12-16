@@ -99,9 +99,48 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
                     "name": "direct"
                 }
             ],
-            "campaigns": [
+            "params": [
             {
-                "name": "facebook-ad-1"
+                "campaignid": [
+                {
+                    "name": "123"
+                },
+                "adgroupid": [
+                {
+                    "name": "235"
+                },
+                "network": [
+                {
+                    "name": "google"
+                },
+                "creative": [
+                {
+                    "name": "62363343"
+                },
+                "keyword": [
+                {
+                    "name": "analytics"
+                },
+                "utm_campaign": [
+                {
+                    "name": "adwords"
+                },
+                "utm_term": [
+                {
+                    "name": "xyz"
+                },
+                "utm_medium": [
+                {
+                    "name": "banner"
+                },
+                "utm_source": [
+                {
+                    "name": "google"
+                },
+                "utm_content": [
+                {
+                    "name": "something"
+                }
             }
         },
         {
@@ -139,11 +178,49 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
                     "name": "direct"
                 }
             ],
-            "campaigns": [
+            "params": [
+            {
+                "campaignid": [
                 {
-                    "name": "remarketing"
+                    "name": "123"
+                },
+                "adgroupid": [
+                {
+                    "name": "235"
+                },
+                "network": [
+                {
+                    "name": "google"
+                },
+                "creative": [
+                {
+                    "name": "62363343"
+                },
+                "keyword": [
+                {
+                    "name": "analytics"
+                },
+                "utm_campaign": [
+                {
+                    "name": "adwords"
+                },
+                "utm_term": [
+                {
+                    "name": "xyz"
+                },
+                "utm_medium": [
+                {
+                    "name": "banner"
+                },
+                "utm_source": [
+                {
+                    "name": "google"
+                },
+                "utm_content": [
+                {
+                    "name": "something"
                 }
-            ]
+            }
         }
 }
 </code></pre>
@@ -195,9 +272,48 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
                     "name": "direct"
                 }
             ],
-            "campaigns": [
+            "params": [
             {
-                "name": "facebook-ad-1",
+                "campaignid": [
+                {
+                    "name": "123"
+                },
+                "adgroupid": [
+                {
+                    "name": "235"
+                },
+                "network": [
+                {
+                    "name": "google"
+                },
+                "creative": [
+                {
+                    "name": "62363343"
+                },
+                "keyword": [
+                {
+                    "name": "analytics"
+                },
+                "utm_campaign": [
+                {
+                    "name": "adwords"
+                },
+                "utm_term": [
+                {
+                    "name": "xyz"
+                },
+                "utm_medium": [
+                {
+                    "name": "banner"
+                },
+                "utm_source": [
+                {
+                    "name": "google"
+                },
+                "utm_content": [
+                {
+                    "name": "something"
+                }
             }
         }
 }
@@ -250,9 +366,48 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
                     "name": "direct"
                 }
             ],
-            "campaigns": [
+            "params": [
             {
-                "name": "facebook-ad-1",
+                "campaignid": [
+                {
+                    "name": "123"
+                },
+                "adgroupid": [
+                {
+                    "name": "235"
+                },
+                "network": [
+                {
+                    "name": "google"
+                },
+                "creative": [
+                {
+                    "name": "62363343"
+                },
+                "keyword": [
+                {
+                    "name": "analytics"
+                },
+                "utm_campaign": [
+                {
+                    "name": "adwords"
+                },
+                "utm_term": [
+                {
+                    "name": "xyz"
+                },
+                "utm_medium": [
+                {
+                    "name": "banner"
+                },
+                "utm_source": [
+                {
+                    "name": "google"
+                },
+                "utm_content": [
+                {
+                    "name": "something"
+                }
             }
         }
 }
