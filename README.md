@@ -504,6 +504,7 @@ This will return <code>200 Ok</code> if successful.
         }
     ]
 }
+</code></pre>
 
 ### Get all visits
 
