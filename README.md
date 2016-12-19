@@ -59,93 +59,93 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 </code></pre>
 
 <pre><code>
-    {
-        "id": 123,
-        "name": "Marty Thomas",
-        "firstName": "Marty",
-        "lastName": "Thomas",
-        "email": "marty@tend.io",
-        "company": "Tend",
-        "title": "Co-Founder",
-        "bio": "Co-Founder at Tend. Founder & Developer at Purlem. Husband to my biggest cheerleader. And father to the new loves of my life.",
-        "website": "https://www.tend.io",
-        "address": "2 N. LaSalle St.",
-        "city": "Chicago",
-        "state": "IL",
-        "zip": "",
-        "country": "",
-        "photo": "https://d2ojpxxtu63wzl.cloudfront.net/static/0cf998559aa4eae658ff31c0b338f155_344b70e63894af453574c5e548d38496ca282ca605c6225d10e2856518bf570c",
-        "facebook": "",
-        "twitter": "http://twitter.com/martyjthomas",
-        "linkedin": "https://www.linkedin.com/in/martinjthomas",
-        "activity": {
-            "sessions": 1,
-            "visits": 6
-        },
-        "pages": ["test.com","test.com/blog"],
-        "entrypages": ["test.com","test.com/blog"],
-        "segments": ["Customers","Hot Lead"],
-        "referrers": ["Google","Facebook"],
-        "params": {
-            "campaignids": ["1234","5678"],
-            "adgroupids": ["1234","5678"],
-            "networks": ["foo","bar"],
-            "creatives": ["foo","bar"],
-            "keywords": ["foo","bar"],
-            "utm_campaigns": ["foo","bar"],
-            "utm_terms": ["foo","bar"],
-            "utm_mediums": ["foo","bar"],
-            "utm_sources": ["foo","bar"],
-            "utm_contents": ["foo","bar"]
-        },
+{
+    "id": 123,
+    "name": "Marty Thomas",
+    "firstName": "Marty",
+    "lastName": "Thomas",
+    "email": "marty@tend.io",
+    "company": "Tend",
+    "title": "Co-Founder",
+    "bio": "Co-Founder at Tend. Founder & Developer at Purlem. Husband to my biggest cheerleader. And father to the new loves of my life.",
+    "website": "https://www.tend.io",
+    "address": "2 N. LaSalle St.",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "",
+    "country": "",
+    "photo": "https://d2ojpxxtu63wzl.cloudfront.net/static/0cf998559aa4eae658ff31c0b338f155_344b70e63894af453574c5e548d38496ca282ca605c6225d10e2856518bf570c",
+    "facebook": "",
+    "twitter": "http://twitter.com/martyjthomas",
+    "linkedin": "https://www.linkedin.com/in/martinjthomas",
+    "activity": {
+        "sessions": 1,
+        "visits": 6
     },
-    {
-        "id": 456,
-        "name": "Ryan Evans",
-        "firstName": "Ryan",
-        "lastName": "Evans",
-        "email": "ryan@tend.io",
-        "company": "Tend",
-        "title": "Co-Founder",
-        "bio": "Co-Founder: Tend [New] (http://tend.io ) Bitesize PR (http://BitesizePR.com ) // Source Sleuth (http://SourceSleuth.com ) // Lift (http://ThisIsLift.com )",
-        "website": "https://www.tend.io",
-        "address": "2 N. LaSalle St.",
-        "city": "Chicago",
-        "state": "IL",
-        "zip": "",
-        "country": "",
-        "photo": "https://d2ojpxxtu63wzl.cloudfront.net/static/ae852ad1a29f3a06cc2af1fa4a3f9638_cef81b960bfeff853bddc25324d95107c7b6a5c7f9f77abbfbca394d0190102d",
-        "facebook": "",
-        "twitter": "https://twitter.com/ryanevans",
-        "linkedin": "https://www.linkedin.com/profile/view?id=11981929",
-        "activity": {
-            "sessions": 32,
-            "visits": 102
-        },
-        "pages": ["test.com","test.com/blog"],
-        "entrypages": ["test.com","test.com/blog"],
-        "segments": ["Customers","Hot Lead"],
-        "referrers": ["Google","Facebook"],
-        "params": {
-            "campaignids": ["1234","5678"],
-            "adgroupids": ["1234","5678"],
-            "networks": ["foo","bar"],
-            "creatives": ["foo","bar"],
-            "keywords": ["foo","bar"],
-            "utm_campaigns": ["foo","bar"],
-            "utm_terms": ["foo","bar"],
-            "utm_mediums": ["foo","bar"],
-            "utm_sources": ["foo","bar"],
-            "utm_contents": ["foo","bar"]
-        },
+    "pages": ["test.com","test.com/blog"],
+    "entrypages": ["test.com","test.com/blog"],
+    "segments": ["Customers","Hot Lead"],
+    "referrers": ["Google","Facebook"],
+    "params": {
+        "campaignids": ["1234","5678"],
+        "adgroupids": ["1234","5678"],
+        "networks": ["foo","bar"],
+        "creatives": ["foo","bar"],
+        "keywords": ["foo","bar"],
+        "utm_campaigns": ["foo","bar"],
+        "utm_terms": ["foo","bar"],
+        "utm_mediums": ["foo","bar"],
+        "utm_sources": ["foo","bar"],
+        "utm_contents": ["foo","bar"]
     },
-    ...
-    "paginator": {
-        "total_count":100,
-        "total_pages":2,
-        "current_page":1,
-        "limit":50
-    }
+},
+{
+    "id": 456,
+    "name": "Ryan Evans",
+    "firstName": "Ryan",
+    "lastName": "Evans",
+    "email": "ryan@tend.io",
+    "company": "Tend",
+    "title": "Co-Founder",
+    "bio": "Co-Founder: Tend [New] (http://tend.io ) Bitesize PR (http://BitesizePR.com ) // Source Sleuth (http://SourceSleuth.com ) // Lift (http://ThisIsLift.com )",
+    "website": "https://www.tend.io",
+    "address": "2 N. LaSalle St.",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "",
+    "country": "",
+    "photo": "https://d2ojpxxtu63wzl.cloudfront.net/static/ae852ad1a29f3a06cc2af1fa4a3f9638_cef81b960bfeff853bddc25324d95107c7b6a5c7f9f77abbfbca394d0190102d",
+    "facebook": "",
+    "twitter": "https://twitter.com/ryanevans",
+    "linkedin": "https://www.linkedin.com/profile/view?id=11981929",
+    "activity": {
+        "sessions": 32,
+        "visits": 102
+    },
+    "pages": ["test.com","test.com/blog"],
+    "entrypages": ["test.com","test.com/blog"],
+    "segments": ["Customers","Hot Lead"],
+    "referrers": ["Google","Facebook"],
+    "params": {
+        "campaignids": ["1234","5678"],
+        "adgroupids": ["1234","5678"],
+        "networks": ["foo","bar"],
+        "creatives": ["foo","bar"],
+        "keywords": ["foo","bar"],
+        "utm_campaigns": ["foo","bar"],
+        "utm_terms": ["foo","bar"],
+        "utm_mediums": ["foo","bar"],
+        "utm_sources": ["foo","bar"],
+        "utm_contents": ["foo","bar"]
+    },
+},
+...
+"paginator": {
+    "total_count":100,
+    "total_pages":2,
+    "current_page":1,
+    "limit":50
+}
 </code></pre>
 
 ### Get contact
@@ -156,46 +156,46 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 </code></pre>
 
 <pre><code>
-    {
-        "id": 123,
-        "name": "Marty Thomas",
-        "firstName": "Marty",
-        "lastName": "Thomas",
-        "email": "marty@tend.io",
-        "company": "Tend",
-        "title": "Co-Founder"
-        "bio": "Co-Founder at Tend. Founder & Developer at Purlem. Husband to my biggest cheerleader. And father to the new loves of my life.",
-        "website": "https://www.tend.io",
-        "address": "2 N. LaSalle St.",
-        "city": "Chicago",
-        "state": "IL",
-        "zip": "",
-        "country": "",
-        "photo": "https://d2ojpxxtu63wzl.cloudfront.net/static/0cf998559aa4eae658ff31c0b338f155_344b70e63894af453574c5e548d38496ca282ca605c6225d10e2856518bf570c",
-        "facebook": "",
-        "twitter": "http://twitter.com/martyjthomas",
-        "linkedin": "https://www.linkedin.com/in/martinjthomas",
-        "activity": {
-            "sessions": 1,
-            "visits": 6
-        },
-        "pages": ["test.com","test.com/blog"],
-        "entrypages": ["test.com","test.com/blog"],
-        "segments": ["Customers","Hot Lead"],
-        "referrers": ["Google","Facebook"],
-        "params": {
-            "campaignids": ["1234","5678"],
-            "adgroupids": ["1234","5678"],
-            "networks": ["foo","bar"],
-            "creatives": ["foo","bar"],
-            "keywords": ["foo","bar"],
-            "utm_campaigns": ["foo","bar"],
-            "utm_terms": ["foo","bar"],
-            "utm_mediums": ["foo","bar"],
-            "utm_sources": ["foo","bar"],
-            "utm_contents": ["foo","bar"]
-        },
-    }
+{
+    "id": 123,
+    "name": "Marty Thomas",
+    "firstName": "Marty",
+    "lastName": "Thomas",
+    "email": "marty@tend.io",
+    "company": "Tend",
+    "title": "Co-Founder"
+    "bio": "Co-Founder at Tend. Founder & Developer at Purlem. Husband to my biggest cheerleader. And father to the new loves of my life.",
+    "website": "https://www.tend.io",
+    "address": "2 N. LaSalle St.",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "",
+    "country": "",
+    "photo": "https://d2ojpxxtu63wzl.cloudfront.net/static/0cf998559aa4eae658ff31c0b338f155_344b70e63894af453574c5e548d38496ca282ca605c6225d10e2856518bf570c",
+    "facebook": "",
+    "twitter": "http://twitter.com/martyjthomas",
+    "linkedin": "https://www.linkedin.com/in/martinjthomas",
+    "activity": {
+        "sessions": 1,
+        "visits": 6
+    },
+    "pages": ["test.com","test.com/blog"],
+    "entrypages": ["test.com","test.com/blog"],
+    "segments": ["Customers","Hot Lead"],
+    "referrers": ["Google","Facebook"],
+    "params": {
+        "campaignids": ["1234","5678"],
+        "adgroupids": ["1234","5678"],
+        "networks": ["foo","bar"],
+        "creatives": ["foo","bar"],
+        "keywords": ["foo","bar"],
+        "utm_campaigns": ["foo","bar"],
+        "utm_terms": ["foo","bar"],
+        "utm_mediums": ["foo","bar"],
+        "utm_sources": ["foo","bar"],
+        "utm_contents": ["foo","bar"]
+    },
+}
 </code></pre>
 
 ### Search contact
@@ -206,46 +206,46 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 </code></pre>
 
 <pre><code>
-    {
-        "id": 123,
-        "name": "Marty Thomas",
-        "firstName": "Marty",
-        "lastName": "Thomas",
-        "email": "marty@tend.io",
-        "company": "Tend",
-        "title": "Co-Founder"
-        "bio": "Co-Founder at Tend. Founder & Developer at Purlem. Husband to my biggest cheerleader. And father to the new loves of my life.",
-        "website": "https://www.tend.io",
-        "address": "2 N. LaSalle St.",
-        "city": "Chicago",
-        "state": "IL",
-        "zip": "",
-        "country": "",
-        "photo": "https://d2ojpxxtu63wzl.cloudfront.net/static/0cf998559aa4eae658ff31c0b338f155_344b70e63894af453574c5e548d38496ca282ca605c6225d10e2856518bf570c",
-        "facebook": "",
-        "twitter": "http://twitter.com/martyjthomas",
-        "linkedin": "https://www.linkedin.com/in/martinjthomas",
-        "activity": {
-            "sessions": 1,
-            "visits": 6
-        },
-        "pages": ["test.com","test.com/blog"],
-        "entrypages": ["test.com","test.com/blog"],
-        "segments": ["Customers","Hot Lead"],
-        "referrers": ["Google","Facebook"],
-        "params": {
-            "campaignids": ["1234","5678"],
-            "adgroupids": ["1234","5678"],
-            "networks": ["foo","bar"],
-            "creatives": ["foo","bar"],
-            "keywords": ["foo","bar"],
-            "utm_campaigns": ["foo","bar"],
-            "utm_terms": ["foo","bar"],
-            "utm_mediums": ["foo","bar"],
-            "utm_sources": ["foo","bar"],
-            "utm_contents": ["foo","bar"]
-        },
-    }
+{
+    "id": 123,
+    "name": "Marty Thomas",
+    "firstName": "Marty",
+    "lastName": "Thomas",
+    "email": "marty@tend.io",
+    "company": "Tend",
+    "title": "Co-Founder"
+    "bio": "Co-Founder at Tend. Founder & Developer at Purlem. Husband to my biggest cheerleader. And father to the new loves of my life.",
+    "website": "https://www.tend.io",
+    "address": "2 N. LaSalle St.",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "",
+    "country": "",
+    "photo": "https://d2ojpxxtu63wzl.cloudfront.net/static/0cf998559aa4eae658ff31c0b338f155_344b70e63894af453574c5e548d38496ca282ca605c6225d10e2856518bf570c",
+    "facebook": "",
+    "twitter": "http://twitter.com/martyjthomas",
+    "linkedin": "https://www.linkedin.com/in/martinjthomas",
+    "activity": {
+        "sessions": 1,
+        "visits": 6
+    },
+    "pages": ["test.com","test.com/blog"],
+    "entrypages": ["test.com","test.com/blog"],
+    "segments": ["Customers","Hot Lead"],
+    "referrers": ["Google","Facebook"],
+    "params": {
+        "campaignids": ["1234","5678"],
+        "adgroupids": ["1234","5678"],
+        "networks": ["foo","bar"],
+        "creatives": ["foo","bar"],
+        "keywords": ["foo","bar"],
+        "utm_campaigns": ["foo","bar"],
+        "utm_terms": ["foo","bar"],
+        "utm_mediums": ["foo","bar"],
+        "utm_sources": ["foo","bar"],
+        "utm_contents": ["foo","bar"]
+    },
+}
 </code></pre>
               
 
@@ -283,27 +283,27 @@ This will return <code>200 Ok</code> if successful.
 <pre><code>curl -u user:pass https://tend.io/api/v1/contacts/123/visits</code></pre>
 
 <pre><code>
-    {
-        "id": 1,
-        "domain": "tend.io",
-        "page": "/",
-        "referrer": "google",
-        "date": "2016-12-15T13:43:59-06:00"
-    },
-    {
-        "id": 2,
-        "domain": "tend.io",
-        "page": "/pricing",
-        "referrer": "",
-        "date": "2016-12-15T13:43:59-06:00"
-    }
-    ...
-    "paginator": {
-        "total_count":100,
-        "total_pages":2,
-        "current_page":1,
-        "limit":50
-    }
+{
+    "id": 1,
+    "domain": "tend.io",
+    "page": "/",
+    "referrer": "google",
+    "date": "2016-12-15T13:43:59-06:00"
+},
+{
+    "id": 2,
+    "domain": "tend.io",
+    "page": "/pricing",
+    "referrer": "",
+    "date": "2016-12-15T13:43:59-06:00"
+}
+...
+"paginator": {
+    "total_count":100,
+    "total_pages":2,
+    "current_page":1,
+    "limit":50
+}
 </code></pre>
 
 ### Get contact segments
@@ -313,14 +313,14 @@ This will return <code>200 Ok</code> if successful.
 <pre><code>curl -u user:pass https://tend.io/api/v1/contacts/123/segments</code></pre>
 
 <pre><code>
-    {
-        "id": 235,
-        "name": "Customer"
-    },
-    {
-        "id": 235,
-        "name": "Hot Lead"
-    }
+{
+    "id": 235,
+    "name": "Customer"
+},
+{
+    "id": 235,
+    "name": "Hot Lead"
+}
 </code></pre>
 
 
@@ -334,13 +334,13 @@ This will return <code>200 Ok</code> if successful.
 </code></pre>
 
 <pre><code>
-    {
-        "id": 1234,
-        "domain": "tend.io",
-        "page": "/",
-        "referrer": "google",
-        "date": "2016-12-15T13:43:59-06:00"
-    }
+{
+    "id": 1234,
+    "domain": "tend.io",
+    "page": "/",
+    "referrer": "google",
+    "date": "2016-12-15T13:43:59-06:00"
+}
 </code></pre>
 
 ### Get all visits
@@ -351,26 +351,26 @@ This will return <code>200 Ok</code> if successful.
 </code></pre>
 
 <pre><code>
-    {
-        "id": 1234,
-        "domain": "tend.io",
-        "page": "/",
-        "referrer": "google",
-        "date": "2016-12-15T13:43:59-06:00"
-    },
-    {
-        "id": "TFf7rFIVGTaSTr8Gd4GRtH6zVFCBEfVoWuFxGBhk",
-        "domain": "tend.io",
-        "page": "/pricing",
-        "referrer": "",
-        "date": "2016-12-15T13:43:59-06:00"
-    }
-    ...
-    "paginator": {
-        "total_count":100,
-        "total_pages":2,
-        "current_page":1,
-        "limit":50
+{
+    "id": 1234,
+    "domain": "tend.io",
+    "page": "/",
+    "referrer": "google",
+    "date": "2016-12-15T13:43:59-06:00"
+},
+{
+    "id": "TFf7rFIVGTaSTr8Gd4GRtH6zVFCBEfVoWuFxGBhk",
+    "domain": "tend.io",
+    "page": "/pricing",
+    "referrer": "",
+    "date": "2016-12-15T13:43:59-06:00"
+}
+...
+"paginator": {
+    "total_count":100,
+    "total_pages":2,
+    "current_page":1,
+    "limit":50
     }
 </code></pre>
 
@@ -384,24 +384,24 @@ If the visit is associated it a contact, the contact's ID will be passed as the 
 </code></pre>
 
 <pre><code>
-    {
-        "page": "/",
-        "visits": 9491
-    },
-    {
-        "page": "/pricing",
-        "visits": 2880
-    },
-    {
-        "page": "/features",
-        "visits": 2190
-    }
-    ...
-    "paginator": {
-        "total_count":100,
-        "total_pages":2,
-        "current_page":1,
-        "limit":50
+{
+    "page": "/",
+    "visits": 9491
+},
+{
+    "page": "/pricing",
+    "visits": 2880
+},
+{
+    "page": "/features",
+    "visits": 2190
+}
+...
+"paginator": {
+    "total_count":100,
+    "total_pages":2,
+    "current_page":1,
+    "limit":50
     }
 </code></pre>
 
@@ -416,22 +416,22 @@ If the visit is associated it a contact, the contact's ID will be passed as the 
 </code></pre>
 
 <pre><code>
-    {
-        "name": "direct"
-    },
-    {
-        "name": "google"
-    },
-    {
-        "name": "feedburner"
-    }
-    ...
-    "paginator": {
-        "total_count":100,
-        "total_pages":2,
-        "current_page":1,
-        "limit":50
-    }
+{
+    "name": "direct"
+},
+{
+    "name": "google"
+},
+{
+    "name": "feedburner"
+}
+...
+"paginator": {
+    "total_count":100,
+    "total_pages":2,
+    "current_page":1,
+    "limit":50
+}
 </code></pre>
 
 ### Get all referrer contacts
@@ -462,14 +462,14 @@ This will return <code>200 OK</code> if the contacts are found, along with the J
 </code></pre>
 
 <pre><code>
-    {
-        "id": 1,
-        "name": "Customer"
-    },
-    {
-        "id": 2,
-        "name": "ViewedPricingPage"
-    }
+{
+    "id": 1,
+    "name": "Customer"
+},
+{
+    "id": 2,
+    "name": "ViewedPricingPage"
+}
 </code></pre>
 
 ### Get segment
@@ -480,10 +480,10 @@ This will return <code>200 OK</code> if the contacts are found, along with the J
 </code></pre>
 
 <pre><code>
-    {
-        "id": 1,
-        "name": "Customer"
-    }
+{
+    "id": 1,
+    "name": "Customer"
+}
 </code></pre>
 
 ### Add segment
