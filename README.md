@@ -58,8 +58,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 <pre><code>curl -u user:pass https://tend.io/api/v1/contacts
 </code></pre>
 
-<pre><code>
-{
+<pre><code>{
     "id": 123,
     "name": "Marty Thomas",
     "firstName": "Marty",
@@ -155,8 +154,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 <pre><code>curl -u user:pass https://tend.io/api/v1/contacts/123
 </code></pre>
 
-<pre><code>
-{
+<pre><code>{
     "id": 123,
     "name": "Marty Thomas",
     "firstName": "Marty",
@@ -205,8 +203,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 <pre><code>curl -u user:pass https://tend.io/api/v1/contacts/search/marty@tend.io
 </code></pre>
 
-<pre><code>
-{
+<pre><code>{
     "id": 123,
     "name": "Marty Thomas",
     "firstName": "Marty",
@@ -282,8 +279,7 @@ This will return <code>200 Ok</code> if successful.
 
 <pre><code>curl -u user:pass https://tend.io/api/v1/contacts/123/visits</code></pre>
 
-<pre><code>
-{
+<pre><code>{
     "id": 1,
     "domain": "tend.io",
     "page": "/",
@@ -312,8 +308,7 @@ This will return <code>200 Ok</code> if successful.
 
 <pre><code>curl -u user:pass https://tend.io/api/v1/contacts/123/segments</code></pre>
 
-<pre><code>
-{
+<pre><code>{
     "id": 235,
     "name": "Customer"
 },
@@ -333,8 +328,7 @@ This will return <code>200 Ok</code> if successful.
 <pre><code>curl -u user:pass https://tend.io/api/v1/visits/123
 </code></pre>
 
-<pre><code>
-{
+<pre><code>{
     "id": 1234,
     "domain": "tend.io",
     "page": "/",
@@ -350,8 +344,7 @@ This will return <code>200 Ok</code> if successful.
 <pre><code>curl -u user:pass https://tend.io/api/v1/visits
 </code></pre>
 
-<pre><code>
-{
+<pre><code>{
     "id": 1234,
     "domain": "tend.io",
     "page": "/",
@@ -383,8 +376,7 @@ If the visit is associated it a contact, the contact's ID will be passed as the 
 <pre><code>curl -u user:pass https://tend.io/api/v1/pages
 </code></pre>
 
-<pre><code>
-{
+<pre><code>{
     "page": "/",
     "visits": 9491
 },
@@ -415,8 +407,7 @@ If the visit is associated it a contact, the contact's ID will be passed as the 
 <pre><code>curl -u user:pass https://tend.io/api/v1/referrers
 </code></pre>
 
-<pre><code>
-{
+<pre><code>{
     "name": "direct"
 },
 {
@@ -461,8 +452,7 @@ This will return <code>200 OK</code> if the contacts are found, along with the J
 <pre><code>curl -u user:pass https://tend.io/api/v1/segments
 </code></pre>
 
-<pre><code>
-{
+<pre><code>{
     "id": 1,
     "name": "Customer"
 },
@@ -479,8 +469,7 @@ This will return <code>200 OK</code> if the contacts are found, along with the J
 <pre><code>curl -u user:pass https://tend.io/api/v1/segments/1
 </code></pre>
 
-<pre><code>
-{
+<pre><code>{
     "id": 1,
     "name": "Customer"
 }
