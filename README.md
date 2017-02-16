@@ -48,6 +48,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 * [Campaigns](#campaigns)
 * [Referrers](#referrers)
 * [Segments](#segments)
+* [Events](#events)
 
 ## <a name="contacts"></a>Contacts 
 
@@ -84,6 +85,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
     "pages": ["test.com","test.com/blog"],
     "entrypages": ["test.com","test.com/blog"],
     "segments": ["Customers","Hot Lead"],
+    "events": ["Stripe Charge"],
     "referrers": ["Google","Facebook"],
     "params": {
         "campaignids": ["1234","5678"],
@@ -124,6 +126,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
     "pages": ["test.com","test.com/blog"],
     "entrypages": ["test.com","test.com/blog"],
     "segments": ["Customers","Hot Lead"],
+    "events": ["Stripe Charge"],
     "referrers": ["Google","Facebook"],
     "params": {
         "campaignids": ["1234","5678"],
@@ -180,6 +183,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
     "pages": ["test.com","test.com/blog"],
     "entrypages": ["test.com","test.com/blog"],
     "segments": ["Customers","Hot Lead"],
+    "events": ["Stripe Charge"],
     "referrers": ["Google","Facebook"],
     "params": {
         "campaignids": ["1234","5678"],
@@ -229,6 +233,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
     "pages": ["test.com","test.com/blog"],
     "entrypages": ["test.com","test.com/blog"],
     "segments": ["Customers","Hot Lead"],
+    "events": ["Stripe Charge"],
     "referrers": ["Google","Facebook"],
     "params": {
         "campaignids": ["1234","5678"],
@@ -315,6 +320,22 @@ This will return <code>200 Ok</code> if successful.
 {
     "id": 235,
     "name": "Hot Lead"
+}
+</code></pre>
+
+### Get contact events
+
+* <code>GET /contacts/{id}/events</code> will return the events associated with the specified contact.
+
+<pre><code>curl -u user:pass https://tend.io/api/v1/contacts/123/events</code></pre>
+
+<pre><code>{
+    "id": 123,
+    "name": "Stripe Charge"
+},
+{
+    "id": 456,
+    "name": "Viewed Checkout Page"
 }
 </code></pre>
 
@@ -502,30 +523,87 @@ This will return <code>200 Ok</code> if the update was a success along with the 
 
 This will return <code>200 Ok</code> if successful.
 
-### Assign a Contact to a Segment
 
-* <code>POST /segments/assign</code> will assign the segment from the parameters passed.
 
-Will need to POST the contact's email, along with a comma-separated list of segments to apply to the contact.
 
-<pre><code>curl -u user:pass -i -X POST -d 'email=user@domain&segments=Customer,BasicUser' https://tend.io/api/v1/segments/assign
+
+
+
+
+
+
+
+
+
+## <a name="events"></a>Events 
+
+### Get all events
+
+* <code>GET /events</code> will return all of the events in the account.
+
+<pre><code>curl -u user:pass https://tend.io/api/v1/events
 </code></pre>
 
 <pre><code>{
-    "message": "segments assigned to user@domain.com"
+    "id": 1,
+    "name": "Customer"
+},
+{
+    "id": 2,
+    "name": "ViewedPricingPage"
 }
 </code></pre>
 
-### Detach a Contact from a Segment
+### Get event
 
-* <code>POST /segments/detach</code> will detach the segment from the parameters passed.
+* <code>GET /events/{id}</code> will return the selected event.
 
-Will need to POST the contact's email, along with a comma-separated list of segments to detach to the contact.
-
-<pre><code>curl -u user:pass -i -X POST -d 'email=user@domain&segments=Customer,BasicUser' https://tend.io/api/v1/segments/detach
+<pre><code>curl -u user:pass https://tend.io/api/v1/events/1
 </code></pre>
 
 <pre><code>{
-    "message": "segments detached from user@domain.com"
+    "id": 1,
+    "name": "Stripe Charge"
+}
+</code></pre>
+
+### Add event
+
+* <code>POST /events</code> will add the event from the parameters passed.
+
+<pre><code>curl -u user:pass -i -X POST -d 'name=API' https://tend.io/api/v1/events
+</code></pre>
+
+This will return <code>201 Success</code> if the insert was a success along with the current JSON representation of the event.
+
+### Update event
+
+* <code>PUT /events/{id}</code> will update the event from the parameters passed.
+
+<pre><code>curl -u user:pass -i -X PUT -d 'name=event_name' https://tend.io/api/v1/events/123
+</code></pre>
+
+This will return <code>200 Ok</code> if the update was a success along with the current JSON representation of the event.
+
+### Delete event
+
+* <code>DELETE /event/{id}</code> will delete the event.
+
+<pre><code>curl -u user:pass -i -X DELETE https://tend.io/api/v1/events/123
+</code></pre>
+
+This will return <code>200 Ok</code> if successful.
+
+### Assign a Contact to a Event
+
+* <code>POST /events/assign</code> will assign the event from the parameters passed.
+
+Will need to POST the contact's email, along with the event name. 
+
+<pre><code>curl -u user:pass -i -X POST -d 'email=user@domain&event=Stripe_Charge' https://tend.io/api/v1/events/assign
+</code></pre>
+
+<pre><code>{
+    "message": "events assigned to user@domain.com"
 }
 </code></pre>
