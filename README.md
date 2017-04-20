@@ -45,7 +45,6 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 
 * [Contacts](#contacts)
 * [Visits](#visits)
-* [Campaigns](#campaigns)
 * [Referrers](#referrers)
 * [Segments](#segments)
 * [Events](#events)
