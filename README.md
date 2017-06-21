@@ -361,7 +361,7 @@ This will return <code>200 Ok</code> if successful.
 
 * <code>GET /visits</code> will return the full visit history.
 
-**URL Parameters (optional)**
+**To and From Dates (optional)**
 
 * <code>GET /visits?from={YYYY-MM-DD}&to={YYYY-MM-DD}</code> will return visits between `to` and `from` dates provided.
 
