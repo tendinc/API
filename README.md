@@ -77,6 +77,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
     "facebook": "",
     "twitter": "http://twitter.com/martyjthomas",
     "linkedin": "https://www.linkedin.com/in/martinjthomas",
+    "a_customfield_id": "the custom field value",
     "activity": {
         "sessions": 1,
         "visits": 6
@@ -118,6 +119,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
     "facebook": "",
     "twitter": "https://twitter.com/ryanevans",
     "linkedin": "https://www.linkedin.com/profile/view?id=11981929",
+    "a_customfield_id": "the custom field value",
     "activity": {
         "sessions": 32,
         "visits": 102
@@ -175,6 +177,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
     "facebook": "",
     "twitter": "http://twitter.com/martyjthomas",
     "linkedin": "https://www.linkedin.com/in/martinjthomas",
+    "a_customfield_id": "the custom field value",
     "activity": {
         "sessions": 1,
         "visits": 6
@@ -225,6 +228,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
     "facebook": "",
     "twitter": "http://twitter.com/martyjthomas",
     "linkedin": "https://www.linkedin.com/in/martinjthomas",
+    "a_customfield_id": "the custom field value",
     "activity": {
         "sessions": 1,
         "visits": 6
