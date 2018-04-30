@@ -587,6 +587,8 @@ This will return <code>200 Ok</code> if successful.
 
 This will return <code>201 Success</code> if the insert was a success along with the current JSON representation of the event.
 
+You can also assign a property to an event by using a colon (`:`) to separate the event name from the property value. (ie: `Stripe Charge:$40`)
+
 ### Update event
 
 * <code>PUT /events/{id}</code> will update the event from the parameters passed.
