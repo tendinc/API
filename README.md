@@ -212,7 +212,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 <pre><code>curl -u user:pass https://tend.io/api/v1/contacts/search/marty@tend.io
 </code></pre>
 
-**NOTE:** Can also use partial searches to find everybody with the same domain (ie `@tend.io`)
+**NOTE:** Can also perform a search for part of emails with just "@tend.io" or "marty".
 
 <pre><code>{
     "id": 123,
