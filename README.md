@@ -44,6 +44,7 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 ## Methods
 
 * [Contacts](#contacts)
+* [Companies](#companies)
 * [Visits](#visits)
 * [Referrers](#referrers)
 * [Segments](#segments)
@@ -345,6 +346,183 @@ This will return <code>200 Ok</code> if successful.
 {
     "id": 456,
     "name": "Viewed Checkout Page"
+}
+</code></pre>
+
+## <a name="companies"></a>Companies 
+
+### Get all companies
+
+* <code>GET /companies</code> will return all of the companies in the account.
+
+<pre><code>curl -u user:pass https://tend.io/api/v1/companies
+</code></pre>
+
+<pre><code>{
+    "id": 123,
+    "name": "Marty Thomas",
+    "website": "https://www.tend.io",
+    "phone": "123-123-1234",
+    "address": "2 N. LaSalle St.",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "",
+    "country": ""
+}
+...
+"paginator": {
+    "total_count":100,
+    "total_pages":2,
+    "current_page":1,
+    "limit":50
+}
+</code></pre>
+
+### Get company
+
+* <code>GET /contacts/{id | website}</code> will return the specified company.
+
+<pre><code>curl -u user:pass https://tend.io/api/v1/contacts/123
+</code></pre>
+
+<pre><code>{
+    "id": 123,
+    "name": "Marty Thomas",
+    "website": "https://www.tend.io",
+    "phone": "123-123-1234",
+    "address": "2 N. LaSalle St.",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "",
+    "country": ""
+}
+</code></pre>
+
+### Add company
+
+* <code>POST /companies</code> will add a new company from the parameters passed.
+
+<pre><code>curl -u user:pass -i -X POST -d 'name=ABC Corp&website=abccorp.com' https://tend.io/api/v1/companies
+</code></pre>
+
+This will return <code>201 Success</code> if the insert was a success along with the current JSON representation of the company.
+
+### Update company
+
+* <code>PUT /companies/{id | website}</code> will update the project from the parameters passed.
+
+<pre><code>curl -u user:pass -i -X PUT -d 'city=Boulder&state=CO' https://tend.io/api/v1/companies/123
+</code></pre>
+
+This will return <code>200 OK</code> if the update was a success along with the current JSON representation of the contact.
+
+### Delete company
+
+* <code>DELETE /companies/{id}</code> will delete the company.
+
+<pre><code>curl -u user:pass -i -X DELETE https://tend.io/api/v1/companies/123
+</code></pre>
+
+This will return <code>200 Ok</code> if successful.
+
+### Get company contacts
+
+* <code>GET /companies/{id | website}/contacts</code> will return the contacts for the specified company.
+
+<pre><code>curl -u user:pass https://tend.io/api/v1/companies/123/contacts</code></pre>
+
+<pre><code>{
+    "id": 123,
+    "ip": "123.12.12.123",
+    "name": "Marty Thomas",
+    "firstName": "Marty",
+    "lastName": "Thomas",
+    "email": "marty@tend.io",
+    "company": "Tend",
+    "title": "Co-Founder",
+    "bio": "Co-Founder at Tend. Founder & Developer at Purlem. Husband to my biggest cheerleader. And father to the new loves of my life.",
+    "website": "https://www.tend.io",
+    "address": "2 N. LaSalle St.",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "",
+    "country": "",
+    "photo": "https://d2ojpxxtu63wzl.cloudfront.net/static/0cf998559aa4eae658ff31c0b338f155_344b70e63894af453574c5e548d38496ca282ca605c6225d10e2856518bf570c",
+    "facebook": "",
+    "twitter": "http://twitter.com/martyjthomas",
+    "linkedin": "https://www.linkedin.com/in/martinjthomas",
+    "a_customfield_id": "the custom field value",
+    "activity": {
+        "sessions": 1,
+        "visits": 6
+    },
+    "pages": ["test.com","test.com/blog"],
+    "entrypages": ["test.com","test.com/blog"],
+    "segments": ["Customers","Hot Lead"],
+    "events": ["Stripe Charge"],
+    "referrers": ["Google","Facebook"],
+    "params": {
+        "campaignids": ["1234","5678"],
+        "adgroupids": ["1234","5678"],
+        "networks": ["foo","bar"],
+        "creatives": ["foo","bar"],
+        "keywords": ["foo","bar"],
+        "utm_campaigns": ["foo","bar"],
+        "utm_terms": ["foo","bar"],
+        "utm_mediums": ["foo","bar"],
+        "utm_sources": ["foo","bar"],
+        "utm_contents": ["foo","bar"]
+    },
+},
+{
+    "id": 456,
+    "ip": "123.12.12.123",
+    "name": "Ryan Evans",
+    "firstName": "Ryan",
+    "lastName": "Evans",
+    "email": "ryan@tend.io",
+    "company": "Tend",
+    "title": "Co-Founder",
+    "bio": "Co-Founder: Tend [New] (http://tend.io ) Bitesize PR (http://BitesizePR.com ) // Source Sleuth (http://SourceSleuth.com ) // Lift (http://ThisIsLift.com )",
+    "website": "https://www.tend.io",
+    "address": "2 N. LaSalle St.",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "",
+    "country": "",
+    "photo": "https://d2ojpxxtu63wzl.cloudfront.net/static/ae852ad1a29f3a06cc2af1fa4a3f9638_cef81b960bfeff853bddc25324d95107c7b6a5c7f9f77abbfbca394d0190102d",
+    "facebook": "",
+    "twitter": "https://twitter.com/ryanevans",
+    "linkedin": "https://www.linkedin.com/profile/view?id=11981929",
+    "a_customfield_id": "the custom field value",
+    "activity": {
+        "sessions": 32,
+        "visits": 102
+    },
+    "pages": ["test.com","test.com/blog"],
+    "entrypages": ["test.com","test.com/blog"],
+    "segments": ["Customers","Hot Lead"],
+    "events": ["Stripe Charge"],
+    "referrers": ["Google","Facebook"],
+    "params": {
+        "campaignids": ["1234","5678"],
+        "adgroupids": ["1234","5678"],
+        "networks": ["foo","bar"],
+        "creatives": ["foo","bar"],
+        "keywords": ["foo","bar"],
+        "utm_campaigns": ["foo","bar"],
+        "utm_terms": ["foo","bar"],
+        "utm_mediums": ["foo","bar"],
+        "utm_sources": ["foo","bar"],
+        "utm_contents": ["foo","bar"]
+    },
+},
+...
+"paginator": {
+    "total_count":100,
+    "total_pages":2,
+    "current_page":1,
+    "limit":50
 }
 </code></pre>
 
