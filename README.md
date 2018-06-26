@@ -66,7 +66,17 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
     "firstName": "Marty",
     "lastName": "Thomas",
     "email": "marty@tend.io",
-    "company": "Tend",
+    "company": {
+        "id": 123,
+        "name": "Tend",
+        "website": "https://www.tend.io",
+        "phone": "123-123-1234",
+        "address": "2 N. LaSalle St.",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "",
+        "country": ""
+    },
     "title": "Co-Founder",
     "bio": "Co-Founder at Tend. Founder & Developer at Purlem. Husband to my biggest cheerleader. And father to the new loves of my life.",
     "website": "https://www.tend.io",
@@ -109,7 +119,17 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
     "firstName": "Ryan",
     "lastName": "Evans",
     "email": "ryan@tend.io",
-    "company": "Tend",
+    "company": {
+        "id": 123,
+        "name": "Tend",
+        "website": "https://www.tend.io",
+        "phone": "123-123-1234",
+        "address": "2 N. LaSalle St.",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "",
+        "country": ""
+    },
     "title": "Co-Founder",
     "bio": "Co-Founder: Tend [New] (http://tend.io ) Bitesize PR (http://BitesizePR.com ) // Source Sleuth (http://SourceSleuth.com ) // Lift (http://ThisIsLift.com )",
     "website": "https://www.tend.io",
@@ -168,7 +188,17 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
     "firstName": "Marty",
     "lastName": "Thomas",
     "email": "marty@tend.io",
-    "company": "Tend",
+    "company": {
+        "id": 123,
+        "name": "Tend",
+        "website": "https://www.tend.io",
+        "phone": "123-123-1234",
+        "address": "2 N. LaSalle St.",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "",
+        "country": ""
+    },
     "title": "Co-Founder"
     "bio": "Co-Founder at Tend. Founder & Developer at Purlem. Husband to my biggest cheerleader. And father to the new loves of my life.",
     "website": "https://www.tend.io",
@@ -206,14 +236,14 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 }
 </code></pre>
 
-### Search contact
+### Search contacts
 
-* <code>GET /contacts/search/{email}</code> will return the searched contact.
+* <code>GET /contacts/search?criteria[{field}]={value}</code> will return the searched contact.
 
-<pre><code>curl -u user:pass https://tend.io/api/v1/contacts/search/marty@tend.io
+<pre><code>curl -u user:pass https://tend.io/api/v1/contacts/search?criteria[city]=Chicago&criteria[state]=IL
 </code></pre>
 
-**NOTE:** Can also perform a search for part of emails with just "@tend.io" or "marty".
+**NOTE:** Can also perform a search for part of the values using "%" (ie `criteria[email]=%@domain.com`)
 
 <pre><code>{
     "id": 123,
@@ -222,7 +252,17 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
     "firstName": "Marty",
     "lastName": "Thomas",
     "email": "marty@tend.io",
-    "company": "Tend",
+    "company": {
+        "id": 123,
+        "name": "Tend",
+        "website": "https://www.tend.io",
+        "phone": "123-123-1234",
+        "address": "2 N. LaSalle St.",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "",
+        "country": ""
+    },
     "title": "Co-Founder"
     "bio": "Co-Founder at Tend. Founder & Developer at Purlem. Husband to my biggest cheerleader. And father to the new loves of my life.",
     "website": "https://www.tend.io",
@@ -267,6 +307,8 @@ You can perform up to 10,000 requests per 5 minute period from the same IP addre
 
 <pre><code>curl -u user:pass -i -X POST -d 'email=joe@test.com&firstName=Joe&lastName=Test' https://tend.io/api/v1/contacts
 </code></pre>
+
+**NOTE:** Pass the `company_id` to associate the contact with a particular company.
 
 This will return <code>201 Success</code> if the insert was a success along with the current JSON representation of the contact.
 
@@ -398,6 +440,28 @@ This will return <code>200 Ok</code> if successful.
 }
 </code></pre>
 
+### Search contacts
+
+* <code>GET /companies/search?criteria[{field}]={value}</code> will return the searched company.
+
+<pre><code>curl -u user:pass https://tend.io/api/v1/contacts/search?criteria[city]=Chicago&criteria[state]=IL
+</code></pre>
+
+**NOTE:** Can also perform a search for part of the values using "%" (ie `criteria[phone]=123%`)
+
+<pre><code>{
+    "id": 123,
+    "name": "Marty Thomas",
+    "website": "https://www.tend.io",
+    "phone": "123-123-1234",
+    "address": "2 N. LaSalle St.",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "",
+    "country": ""
+}
+</code></pre>
+
 ### Add company
 
 * <code>POST /companies</code> will add a new company from the parameters passed.
@@ -438,7 +502,17 @@ This will return <code>200 Ok</code> if successful.
     "firstName": "Marty",
     "lastName": "Thomas",
     "email": "marty@tend.io",
-    "company": "Tend",
+    "company": {
+        "id": 123,
+        "name": "Tend",
+        "website": "https://www.tend.io",
+        "phone": "123-123-1234",
+        "address": "2 N. LaSalle St.",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "",
+        "country": ""
+    },
     "title": "Co-Founder",
     "bio": "Co-Founder at Tend. Founder & Developer at Purlem. Husband to my biggest cheerleader. And father to the new loves of my life.",
     "website": "https://www.tend.io",
@@ -481,7 +555,17 @@ This will return <code>200 Ok</code> if successful.
     "firstName": "Ryan",
     "lastName": "Evans",
     "email": "ryan@tend.io",
-    "company": "Tend",
+    "company": {
+        "id": 123,
+        "name": "Tend",
+        "website": "https://www.tend.io",
+        "phone": "123-123-1234",
+        "address": "2 N. LaSalle St.",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "",
+        "country": ""
+    },
     "title": "Co-Founder",
     "bio": "Co-Founder: Tend [New] (http://tend.io ) Bitesize PR (http://BitesizePR.com ) // Source Sleuth (http://SourceSleuth.com ) // Lift (http://ThisIsLift.com )",
     "website": "https://www.tend.io",
