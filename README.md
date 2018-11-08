@@ -625,6 +625,20 @@ This will return <code>200 Ok</code> if successful.
     "domain": "tend.io",
     "page": "/",
     "referrer": "google",
+    "device": "MacBook",
+    "ip": "127.0.0.1",
+    "params": {
+        "campaignid": ["1234","5678"],
+        "adgroupid": ["1234","5678"],
+        "network": ["foo","bar"],
+        "creative": ["foo","bar"],
+        "keyword": ["foo","bar"],
+        "utm_campaign": ["foo","bar"],
+        "utm_term": ["foo","bar"],
+        "utm_medium": ["foo","bar"],
+        "utm_source": ["foo","bar"],
+        "utm_content": ["foo","bar"]
+    },
     "date": "2016-12-15T13:43:59-06:00"
 }
 </code></pre>
@@ -645,6 +659,20 @@ This will return <code>200 Ok</code> if successful.
     "domain": "tend.io",
     "page": "/",
     "referrer": "google",
+    "device": "MacBook",
+    "ip": "127.0.0.1",
+    "params": {
+        "campaignid": ["1234","5678"],
+        "adgroupid": ["1234","5678"],
+        "network": ["foo","bar"],
+        "creative": ["foo","bar"],
+        "keyword": ["foo","bar"],
+        "utm_campaign": ["foo","bar"],
+        "utm_term": ["foo","bar"],
+        "utm_medium": ["foo","bar"],
+        "utm_source": ["foo","bar"],
+        "utm_content": ["foo","bar"]
+    },
     "date": "2016-12-15T13:43:59-06:00"
 },
 {
@@ -652,6 +680,20 @@ This will return <code>200 Ok</code> if successful.
     "domain": "tend.io",
     "page": "/pricing",
     "referrer": "",
+    "device": "MacBook",
+    "ip": "127.0.0.1",
+    "params": {
+        "campaignid": ["1234","5678"],
+        "adgroupid": ["1234","5678"],
+        "network": ["foo","bar"],
+        "creative": ["foo","bar"],
+        "keyword": ["foo","bar"],
+        "utm_campaign": ["foo","bar"],
+        "utm_term": ["foo","bar"],
+        "utm_medium": ["foo","bar"],
+        "utm_source": ["foo","bar"],
+        "utm_content": ["foo","bar"]
+    },
     "date": "2016-12-15T13:43:59-06:00"
 }
 ...
